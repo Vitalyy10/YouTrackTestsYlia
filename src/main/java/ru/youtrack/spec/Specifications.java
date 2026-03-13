@@ -27,7 +27,7 @@ public class Specifications {
         Set<String> blacklistHeader = new HashSet<>();
         blacklistHeader.add("Authorization");
 
-        requestBuilder.setBaseUri("http://localhost:8081/api");
+        requestBuilder.setBaseUri("http://host.docker.internal:8081/api");
         // Временно включаю лоигрование токена
         requestBuilder.addFilter(new RequestLoggingFilter(LogDetail.ALL, true, System.out, false, blacklistHeader));
         requestBuilder.addFilter(new ResponseLoggingFilter());
