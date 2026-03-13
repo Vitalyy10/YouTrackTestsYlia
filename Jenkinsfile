@@ -3,11 +3,11 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/USERNAME/REPOSITORY.git'
-            }
-        }
+//         stage('Checkout') {
+//             steps {
+//                 git 'https://github.com/USERNAME/REPOSITORY.git'
+//             }
+//         }
 
         stage('Tests') {
             steps {
