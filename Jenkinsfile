@@ -3,7 +3,7 @@ pipeline {
 
         tools {
             maven 'Maven-3.9.14'   // имя из Global Tool Configuration
-            jdk 'Java17'           // если нужно
+            jdk 'JDK-17'           // если нужно
         }
 
     stages {
