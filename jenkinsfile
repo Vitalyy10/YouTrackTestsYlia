@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/USERNAME/REPOSITORY.git'
+            }
+        }
+
+        stage('Tests') {
+            steps {
+                sh 'mvn clean test'
+            }
+        }
+    }
+
+    post {
+        always {
+            allure results: [[path: 'target/allure-results']]
+        }
+    }
+}
