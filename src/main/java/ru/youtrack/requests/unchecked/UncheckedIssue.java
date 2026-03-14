@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.given;
 
 public class UncheckedIssue extends BaseRequest  {
 
-    private static final String ISSUE_EDPOINT = "/issues";
+    private static final String ISSUE_EDPOINT = "issues?fields=id,summary,description";
     public UncheckedIssue(RequestSpecification spec) {
         super(spec);
     }
