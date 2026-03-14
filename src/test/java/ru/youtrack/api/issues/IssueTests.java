@@ -19,6 +19,7 @@ public class IssueTests extends BaseApiTest {
                         .project(Project.builder()
                                 .id("0-1")
                                 .build())
+                        .type("Issue")
                 .build());
 
     }
