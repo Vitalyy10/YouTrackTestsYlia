@@ -27,7 +27,7 @@ public class Specifications {
         Set<String> blacklistHeader = new HashSet<>();
         blacklistHeader.add("Authorization");
 
-        requestBuilder.setBaseUri("http://testYourTrack2:8080");
+        requestBuilder.setBaseUri("http://testYourTrack2:8080/api");
 //        requestBuilder.setBaseUri("http://localhost:8081/api");
         // Временно включаю лоигрование токена
         requestBuilder.addFilter(new RequestLoggingFilter(LogDetail.ALL, true, System.out, false, blacklistHeader));
@@ -38,7 +38,8 @@ public class Specifications {
 
         requestBuilder.setAccept(ContentType.JSON.withCharset(StandardCharsets.UTF_8));
         requestBuilder.setContentType(ContentType.JSON.withCharset(StandardCharsets.UTF_8));
-        requestBuilder.addHeader("accept", "*/*");
+        requestBuilder.addHeader("accept", "application/json");
+//        requestBuilder.addHeader("accept", "*/*");
 
 
         return requestBuilder;
